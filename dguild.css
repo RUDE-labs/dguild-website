@@ -1,0 +1,248 @@
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@font-face {
+    font-family: SFAlienEncounters;
+    src: url('fonts/SFAlienEncounters/SFAlienEncounters.ttf');
+}
+
+/* Common Styles */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-size: 150px 150px;
+    background-image: linear-gradient(90deg,#e8e4e4 .5px,transparent 2px),linear-gradient(180deg,#e8e4e4 .5px,transparent 2px);
+}
+
+.container {
+	max-width: 1290px;
+	margin: 0 auto;
+}
+
+
+/* Header Styles */
+
+header {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	padding: 40px 30px 50px;
+	height: 24vh;
+}
+
+.site-logo img {
+	max-width: 538px;
+}
+
+.social-links,
+.social-links a {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.social-links a {
+	padding: 0 25px;
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	color: #000000;
+	text-decoration: none;
+}
+
+.social-links img {
+	margin-right: 15px;
+}
+
+
+/* Content Styles */
+
+.content-wrapper {
+	height: 58vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-items: center;
+	padding: 120px 30px 10px;
+	grid-gap: 50px;
+}
+
+.left-content h1 {
+	font-family: SFAlienEncounters;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100px;
+  	line-height: 120%;
+  	margin-bottom: 20px;
+	background: linear-gradient(83.4deg, #FF4443 28.59%, #00DEE0 72.36%);
+	-webkit-background-clip: text;
+  	-webkit-text-fill-color: transparent;
+}
+
+.left-content p {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 160%;
+	color: #000000;
+	margin-bottom: 60px;
+}
+
+.right-content {
+	background: linear-gradient(88.78deg, #FF4443 0.94%, #00DEE0 98.84%);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	height: 560px;
+	width: 560px;
+	position: relative;
+}
+
+.right-content img {
+	position: absolute;
+	top: -60px;
+}
+
+.actions {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 26px;
+}
+
+.actions button {
+	background: #FFFFFF;
+	border: 1px solid #000000;
+	box-shadow: inset -1px -1px 0px 1px rgba(0, 0, 0, 0.5), inset 3px 3px 0px rgba(255, 255, 255, 0.7);
+	padding: 17px;
+	cursor: pointer;
+}
+
+.actions button:focus {
+	outline: none;
+}
+
+
+/* Responsiveness */
+
+@media (max-width: 1200px) {
+	.site-logo img {
+		max-width: 300px;
+	}
+	.left-content h1 {
+		font-size: 64px;
+	}
+	.right-content {
+		height: 460px;
+		width: 460px;
+	}
+	.right-content img {
+		width: 405px;
+	}
+}
+
+@media (max-width: 993px) {
+	.content-wrapper {
+		height: 76vh;
+	}
+	.content {
+		grid-template-columns: 1fr;
+		grid-gap: 100px;
+	}
+	.left-content h1 {
+		font-size: 48px;
+	}
+	.left-content p {
+		text-align: center;
+	}
+	.right-content {
+		height: 360px;
+		width: 360px;
+	}
+	.right-content img {
+		width: 305px;
+		top: -30px;
+	}
+}
+
+@media (max-width: 768px) {
+	header {
+		height: 35vh;
+	}
+	.site-logo img {
+	    max-width: 200px;
+	}
+	.social-links a {
+		padding: 0 15px;
+	}
+	.content-wrapper {
+		height: 65vh;
+	}
+	.content {
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-top: 40px;
+		padding: 30px;
+		grid-gap: 10px;
+	}
+	.left-content {
+		width: 100%;
+		text-align: center;
+	}
+	.left-content p {
+		padding-right: 0;
+		margin: 0 auto 30px;
+	}
+	.right-content {
+		margin-top: 100px;
+	}
+	.actions {
+		grid-template-columns: 300px;
+    	justify-content: center;
+	}
+}
+
+@media (max-width: 576px) {
+	header {
+		flex-wrap: wrap;
+		justify-content: center;
+		height: 16vh;
+	}
+	.site-logo {
+		margin-bottom: 20px;
+	}
+	.content-wrapper {
+		height: 84vh;
+	}
+	.content {
+		grid-gap: 100px;
+	}
+	.left-content h1 {
+		font-size: 30px;
+	}
+	.left-content p {
+		font-size: 16px;
+	}
+	.right-content {
+		height: 250px;
+		width: 250px;
+		margin-top: 0px;
+	}
+	.right-content img {
+		width: 205px;
+		top: -20px;
+	}
+}
